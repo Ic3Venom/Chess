@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing.Text;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace ChessAttempt2
@@ -15,9 +12,9 @@ namespace ChessAttempt2
 
         //font used for chess pieces
         static PrivateFontCollection pfc = new PrivateFontCollection();
-        static char[] whitePieces = { 'p', 'n', 'b', 'r', 'q', 'k' };
-        static char[] blackPieces = { 'o', 'm', 'v', 't', 'w', 'l' };
-        static List<string> pieceNames = new List<string>() { "Pawn", "Knight", "Bishop", "Rook", "Queen", "King" };
+        private static char[] whitePieces = { 'p', 'n', 'b', 'r', 'q', 'k' };
+        private static char[] blackPieces = { 'o', 'm', 'v', 't', 'w', 'l' };
+        public static List<string> pieceNames = new List<string>() { "Pawn", "Knight", "Bishop", "Rook", "Queen", "King" };
 
         public Piece(string name, bool side, Label start)
         {
@@ -26,13 +23,14 @@ namespace ChessAttempt2
 
             if (side)
             {
+                start.Font = new System.Drawing.Font(pfc.Families[0], 72);
                 start.Text = whitePieces[pieceNames.IndexOf(name)].ToString();
             }
             else
             {
+                start.Font = new System.Drawing.Font(pfc.Families[0], 72);
                 start.Text = blackPieces[pieceNames.IndexOf(name)].ToString();
             }
-            
         }
 
         //Font used to create the chess pieces
@@ -41,32 +39,15 @@ namespace ChessAttempt2
             int fontLength = Properties.Resources.CASEFONT.Length;
             byte[] fontdata = Properties.Resources.CASEFONT;
 
-            System.IntPtr data = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontLength);
-            System.Runtime.InteropServices.Marshal.Copy(fontdata, 0, data, fontLength);
+            System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
+            Marshal.Copy(fontdata, 0, data, fontLength);
 
             pfc.AddMemoryFont(data, fontLength);
         }
 
-        public bool ValidateMove(Label start, Label end)
+        public static bool ValidateMove(Label start, Label end)
         {
-            switch (name)
-            {
-                case "Pawn":
-                    break;
-                case "Knight":
-                    break;
-                case "Bishop":
-                    break;
-                case "Rook":
-                    break;
-                case "Queen":
-                    break;
-                case "King":
-                    break;
-                default:
-                    return false;
-            }
-            return false;
+            return true;
         }
 
         private bool Pawn(Label start, Label end)
