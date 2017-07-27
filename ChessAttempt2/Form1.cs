@@ -9,7 +9,7 @@ namespace ChessAttempt2
     {
         List<Piece> pieces = new List<Piece>();
         Label lastPiece = null;
-        bool side = true;
+        bool side = true, gameStart = false;
         int p1time, p2time;
 
 
@@ -18,7 +18,6 @@ namespace ChessAttempt2
             InitializeComponent();
             Piece.InitCustomLabelFont();
             InitializeBoard();
-            
 
             message.Text = "Press anywhere to begin the game!";
         }
@@ -75,6 +74,8 @@ namespace ChessAttempt2
             //swap clocks/sides
             player1Time.Enabled = !player1Time.Enabled;
             player2Time.Enabled = !player2Time.Enabled;
+            player1.Enabled = !player1.Enabled;
+            player2.Enabled = !player2.Enabled;
             side = !side;
 
         }
@@ -83,22 +84,31 @@ namespace ChessAttempt2
         {
             message.Click -= game_Start;
             message.Text = null;
-            player1.Enabled = true;
+
+            gameStart = !gameStart;
+
+            //Need to flip player1/player2 after game starts
+            player2Time.Enabled = true;
+            player2.Enabled = true;
+
             Clocks();
         }
-        
+
         private void label_Click(object sender, EventArgs e)
         {
-            resetColor(lastPiece);
+            if (gameStart)
+            {
+                resetColor(lastPiece);
 
-            Label label = sender as Label;
-            
-            label.BackColor = System.Drawing.Color.LightGreen;
+                Label label = sender as Label;
 
-            if (Piece.ValidateMove(lastPiece, label))
-                Clocks();
+                label.BackColor = System.Drawing.Color.LightGreen;
 
-            lastPiece = label;
+                if (Piece.ValidateMove(lastPiece, label))
+                    Clocks();
+
+                lastPiece = label;
+            }
         }
 
         private void resetColor(Label lastPiece)

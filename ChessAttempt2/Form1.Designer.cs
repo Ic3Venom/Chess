@@ -1115,6 +1115,7 @@
             // 
             // player2Time
             // 
+            this.player2Time.Enabled = false;
             this.player2Time.Font = new System.Drawing.Font("Arial Unicode MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.player2Time.Location = new System.Drawing.Point(593, 0);
             this.player2Time.Name = "player2Time";
@@ -1125,6 +1126,7 @@
             // 
             // player1Time
             // 
+            this.player1Time.Enabled = false;
             this.player1Time.Font = new System.Drawing.Font("Arial Unicode MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.player1Time.Location = new System.Drawing.Point(0, 0);
             this.player1Time.Name = "player1Time";
