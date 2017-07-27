@@ -17,34 +17,22 @@ namespace ChessAttempt2
         static PrivateFontCollection pfc = new PrivateFontCollection();
         static char[] whitePieces = { 'p', 'n', 'b', 'r', 'q', 'k' };
         static char[] blackPieces = { 'o', 'm', 'v', 't', 'w', 'l' };
+        static List<string> pieceNames = new List<string>() { "Pawn", "Knight", "Bishop", "Rook", "Queen", "King" };
 
         public Piece(string name, bool side, Label start)
         {
             this.name = name;
             this.side = side;
 
-            foreach()
-            switch (name)
+            if (side)
             {
-                case "Pawn":
-                    start.Text = whitePieces[0].ToString();
-                    break;
-                case "Knight":
-                    start.Text = whitePieces[1].ToString();
-                    break;
-                case "Bishop":
-                    start.Text = whitePieces[2].ToString();
-                    break;
-                case "Rook":
-                    start.Text = whitePieces[3].ToString();
-                    break;
-                case "Queen":
-                    start.Text = whitePieces[4].ToString();
-                    break;
-                case "King":
-                    start.Text = whitePieces[5].ToString();
-                    break;
+                start.Text = whitePieces[pieceNames.IndexOf(name)].ToString();
             }
+            else
+            {
+                start.Text = blackPieces[pieceNames.IndexOf(name)].ToString();
+            }
+            
         }
 
         //Font used to create the chess pieces
