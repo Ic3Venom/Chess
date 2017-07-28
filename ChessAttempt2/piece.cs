@@ -64,62 +64,57 @@ namespace ChessAttempt2
 
         public static bool ValidateMove(Piece start, Piece end, bool side)
         {
-            //If both pieces are empty
-            if (start.GetColor() == 2  && end.GetColor() == 2)
-                return false;
-            //If the first piece is empty
-            if (start.GetColor() == 2)
-                return false;
-            //If player 1 selects a black piece first
-            else if (side == true && start.GetColor() == 1)
-                return false;
-            //If player 2 selects a white piece first
-            else if (side == false && start.GetColor() == 0)
-                return false;
-            //If player 1 selects their own piece to move onto
-            else if (side == true && end.GetColor() == 0)
-                return false;
-            //If player 2 selects their own piece to move onto
-            else if (side == false && end.GetColor() == 1)
-                return false;
-            //If start piece is of opposite color to end piece
-            else if (start.GetColor() != end.GetColor())
-                return true;
-            //If the second piece is empty
-            else if (end.GetColor() == 2)
-                return true;
-            //Extraneous solutions
-            // TODO: remove after debug
-            else
-                return false;
+            bool valid = false;
+
+            valid = pieceLogic(start, end, side);
+
+            return valid;
         }
 
-        private bool Pawn(Label end)
+        private static bool pieceLogic(Piece start, Piece end, bool side)
+        {
+            /* Necessary logic points that need to be covered:
+                - Both pieces can't be of the same color
+                - The first piece can't be the opposite color as the current side
+                - The second piece can't be the same color as the current side
+                - The first piece can't be of type "None"
+                - Player 1 can't select a black piece as first piece
+                - Player 2 can't select a white piece as first piece
+            */
+            return !((start.GetColor() == end.GetColor())
+                || (side == true  && start.GetColor() == 1)
+                || (side == true  && end.GetColor() == 0)
+                || (side == false && start.GetColor() == 0)
+                || (side == false && end.GetColor() == 1)
+                || (start.GetColor() == 2));
+        }
+
+        private static bool Pawn(Label end)
         {
             return true;
         }
 
-        private bool Knight(Label end)
+        private static bool Knight(Label end)
         {
             return true;
         }
 
-        private bool Bishop(Label end)
+        private static bool Bishop(Label end)
         {
             return true;
         }
 
-        private bool Rook(Label end)
+        private static bool Rook(Label end)
         {
             return true;
         }
 
-        private bool Queen(Label end)
+        private static bool Queen(Label end)
         {
             return true;
         }
 
-        private bool King(Label end)
+        private static bool King(Label end)
         {
             return true;
         }

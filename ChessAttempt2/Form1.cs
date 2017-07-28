@@ -7,7 +7,7 @@ namespace ChessAttempt2
     public partial class Form1 : Form
     {
         List<Piece> pieces = new List<Piece>();
-        bool side = true, gameStart = false;
+        bool side = false, gameStart = false;
         Label startLabel = null;
         int p1time, p2time;
 
@@ -60,6 +60,13 @@ namespace ChessAttempt2
 
         private void Clocks()
         {
+            //swap clocks/sides
+            player1Time.Enabled = !player1Time.Enabled;
+            player2Time.Enabled = !player2Time.Enabled;
+            player1.Enabled = !player1.Enabled;
+            player2.Enabled = !player2.Enabled;
+            side = !side;
+
             if (side)
             {
                 message.Text = "Player 1's turn!";
@@ -69,12 +76,6 @@ namespace ChessAttempt2
                 message.Text = "Player 2's turn!";
             }
 
-            //swap clocks/sides
-            player1Time.Enabled = !player1Time.Enabled;
-            player2Time.Enabled = !player2Time.Enabled;
-            player1.Enabled = !player1.Enabled;
-            player2.Enabled = !player2.Enabled;
-            side = !side;
         }
 
         private Piece findPiece(Label label)
@@ -121,15 +122,15 @@ namespace ChessAttempt2
         private void game_Start(object sender, EventArgs e)
         {
             message.Click -= game_Start;
-            message.Text = null;
+            message.Text = "Player 1's turn!";
 
             gameStart = !gameStart;
 
             //Need to flip player1/player2 after game starts
-            player2Time.Enabled = true;
-            player2.Enabled = true;
-
-            Clocks();
+            player1Time.Enabled = true;
+            player1.Enabled = true;
+            side = true;
+            
         }
 
         private void label_Click(object sender, EventArgs e)
@@ -152,7 +153,13 @@ namespace ChessAttempt2
                 Piece start = findPiece(startLabel);
                 Piece end = findPiece(endLabel);
 
-                if (Piece.ValidateMove(start, end, side))
+                if (start == end)
+                {
+                    Color(endLabel);
+                    startLabel = null;
+                    endLabel = null;
+                }
+                else if (Piece.ValidateMove(start, end, side))
                 {
                     start.Move(end);
                     pieces.Remove(end);
