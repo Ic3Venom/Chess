@@ -7,8 +7,8 @@ namespace ChessAttempt2
     public partial class Form1 : Form
     {
         List<Piece> pieces = new List<Piece>();
-        Label lastPiece = null;
-        bool side = true, gameStart = false, moved = false;
+        bool side = true, gameStart = false;
+        Label startLabel = null;
         int p1time, p2time;
 
 
@@ -24,43 +24,42 @@ namespace ChessAttempt2
         private void InitializeBoard()
         {
             //Wall of text, but it's better than looping through null labels
-            pieces.Add(new Piece(Piece.pieceNames[3], true,  row8_1));
-            pieces.Add(new Piece(Piece.pieceNames[1], true,  row8_2));
-            pieces.Add(new Piece(Piece.pieceNames[2], true,  row8_3));
-            pieces.Add(new Piece(Piece.pieceNames[4], true,  row8_4));
-            pieces.Add(new Piece(Piece.pieceNames[5], true,  row8_5));
-            pieces.Add(new Piece(Piece.pieceNames[2], true,  row8_6));
-            pieces.Add(new Piece(Piece.pieceNames[1], true,  row8_7));
-            pieces.Add(new Piece(Piece.pieceNames[3], true,  row8_8));
-            pieces.Add(new Piece(Piece.pieceNames[3], false, row1_1));
-            pieces.Add(new Piece(Piece.pieceNames[1], false, row1_2));
-            pieces.Add(new Piece(Piece.pieceNames[2], false, row1_3));
-            pieces.Add(new Piece(Piece.pieceNames[4], false, row1_4));
-            pieces.Add(new Piece(Piece.pieceNames[5], false, row1_5));
-            pieces.Add(new Piece(Piece.pieceNames[2], false, row1_6));
-            pieces.Add(new Piece(Piece.pieceNames[1], false, row1_7));
-            pieces.Add(new Piece(Piece.pieceNames[3], false, row1_8));
-            pieces.Add(new Piece(Piece.pieceNames[0], false, row2_8));
-            pieces.Add(new Piece(Piece.pieceNames[0], true,  row7_1));
-            pieces.Add(new Piece(Piece.pieceNames[0], true,  row7_2));
-            pieces.Add(new Piece(Piece.pieceNames[0], true,  row7_3));
-            pieces.Add(new Piece(Piece.pieceNames[0], true,  row7_4));
-            pieces.Add(new Piece(Piece.pieceNames[0], true,  row7_5));
-            pieces.Add(new Piece(Piece.pieceNames[0], true,  row7_6));
-            pieces.Add(new Piece(Piece.pieceNames[0], true,  row7_7));
-            pieces.Add(new Piece(Piece.pieceNames[0], true,  row7_8));
-            pieces.Add(new Piece(Piece.pieceNames[0], false, row2_1));
-            pieces.Add(new Piece(Piece.pieceNames[0], false, row2_2));
-            pieces.Add(new Piece(Piece.pieceNames[0], false, row2_3));
-            pieces.Add(new Piece(Piece.pieceNames[0], false, row2_4));
-            pieces.Add(new Piece(Piece.pieceNames[0], false, row2_5));
-            pieces.Add(new Piece(Piece.pieceNames[0], false, row2_6));
-            pieces.Add(new Piece(Piece.pieceNames[0], false, row2_7));
+            pieces.Add(new Piece(Piece.pieceNames[3], 0, row8_1));
+            pieces.Add(new Piece(Piece.pieceNames[1], 0, row8_2));
+            pieces.Add(new Piece(Piece.pieceNames[2], 0, row8_3));
+            pieces.Add(new Piece(Piece.pieceNames[4], 0, row8_4));
+            pieces.Add(new Piece(Piece.pieceNames[5], 0, row8_5));
+            pieces.Add(new Piece(Piece.pieceNames[2], 0, row8_6));
+            pieces.Add(new Piece(Piece.pieceNames[1], 0, row8_7));
+            pieces.Add(new Piece(Piece.pieceNames[3], 0, row8_8));
+            pieces.Add(new Piece(Piece.pieceNames[3], 1, row1_1));
+            pieces.Add(new Piece(Piece.pieceNames[1], 1, row1_2));
+            pieces.Add(new Piece(Piece.pieceNames[2], 1, row1_3));
+            pieces.Add(new Piece(Piece.pieceNames[4], 1, row1_4));
+            pieces.Add(new Piece(Piece.pieceNames[5], 1, row1_5));
+            pieces.Add(new Piece(Piece.pieceNames[2], 1, row1_6));
+            pieces.Add(new Piece(Piece.pieceNames[1], 1, row1_7));
+            pieces.Add(new Piece(Piece.pieceNames[3], 1, row1_8));
+            pieces.Add(new Piece(Piece.pieceNames[0], 1, row2_8));
+            pieces.Add(new Piece(Piece.pieceNames[0], 0, row7_8));
+            pieces.Add(new Piece(Piece.pieceNames[0], 0, row7_1));
+            pieces.Add(new Piece(Piece.pieceNames[0], 0, row7_2));
+            pieces.Add(new Piece(Piece.pieceNames[0], 0, row7_3));
+            pieces.Add(new Piece(Piece.pieceNames[0], 0, row7_4));
+            pieces.Add(new Piece(Piece.pieceNames[0], 0, row7_5));
+            pieces.Add(new Piece(Piece.pieceNames[0], 0, row7_6));
+            pieces.Add(new Piece(Piece.pieceNames[0], 0, row7_7));
+            pieces.Add(new Piece(Piece.pieceNames[0], 1, row2_1));
+            pieces.Add(new Piece(Piece.pieceNames[0], 1, row2_2));
+            pieces.Add(new Piece(Piece.pieceNames[0], 1, row2_3));
+            pieces.Add(new Piece(Piece.pieceNames[0], 1, row2_4));
+            pieces.Add(new Piece(Piece.pieceNames[0], 1, row2_5));
+            pieces.Add(new Piece(Piece.pieceNames[0], 1, row2_6));
+            pieces.Add(new Piece(Piece.pieceNames[0], 1, row2_7));
         }
 
         private void Clocks()
         {
-
             if (side)
             {
                 message.Text = "Player 1's turn!";
@@ -76,7 +75,6 @@ namespace ChessAttempt2
             player1.Enabled = !player1.Enabled;
             player2.Enabled = !player2.Enabled;
             side = !side;
-
         }
 
         private Piece findPiece(Label label)
@@ -88,10 +86,10 @@ namespace ChessAttempt2
                     return piece;
                 }
             }
-            return new Piece("None", true, label);
+            return new Piece("None", 2, label);
         }
 
-        private void resetColor(Label piece)
+        private void Color(Label piece)
         {
             if (piece != null)
             {
@@ -138,52 +136,35 @@ namespace ChessAttempt2
         {
             if (gameStart)
             {
-                resetColor(lastPiece);
+                Color(startLabel);
 
-                Label thisPiece = sender as Label;
+                Label endLabel = sender as Label;
 
-                if(!moved)
+                endLabel.BackColor = System.Drawing.Color.PaleGreen; //System.Drawing.Color.LightGreen;
+                
+
+                if (startLabel == null)
                 {
-                    thisPiece.BackColor = System.Drawing.Color.LightGreen;
-                    lastPiece = thisPiece;
-                    moved = !moved;
+                    startLabel = endLabel;
                     return;
                 }
-
-                Piece p1 = findPiece(thisPiece);
-                Piece p2 = findPiece(lastPiece);
                 
-                if (Piece.ValidateMove(p1, p2))
+                Piece start = findPiece(startLabel);
+                Piece end = findPiece(endLabel);
+
+                if (Piece.ValidateMove(start, end, side))
                 {
-                    p2.MovePiece(p1);
-                    pieces.Remove(p2);
-                    resetColor(thisPiece);
+                    start.Move(end);
+                    pieces.Remove(end);
+                    Color(endLabel);
 
-                    lastPiece = null;
-                    moved = false;
+                    startLabel = null;
                     Clocks();
-
-                    return;
                 }
                 else
                 {
-                    lastPiece = thisPiece;
-                    resetColor(thisPiece);
+                    startLabel = endLabel;
                 }
-                /*if (p2.GetSide() == side)
-                {
-                    if (p2 != null && Piece.ValidateMove(p1, p2))
-                    {
-                        p2.MovePiece(thisPiece);
-                        thisPiece.Dispose();
-                        pieces.Remove(findPiece(lastPiece));
-                        resetColor(thisPiece);
-                        lastPiece = null;
-                        Clocks();
-                        return;
-                    }
-                    lastPiece = thisPiece;
-                }*/
             }
         }
 
