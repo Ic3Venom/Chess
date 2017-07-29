@@ -242,7 +242,7 @@
             // 
             // row1_1
             // 
-            this.row1_1.BackColor = System.Drawing.Color.Silver;
+            this.row1_1.BackColor = System.Drawing.Color.SkyBlue;
             this.row1_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row1_1.Location = new System.Drawing.Point(0, 700);
             this.row1_1.Margin = new System.Windows.Forms.Padding(0);
@@ -254,7 +254,7 @@
             // 
             // row1_2
             // 
-            this.row1_2.BackColor = System.Drawing.Color.White;
+            this.row1_2.BackColor = System.Drawing.Color.MistyRose;
             this.row1_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row1_2.Location = new System.Drawing.Point(100, 700);
             this.row1_2.Margin = new System.Windows.Forms.Padding(0);
@@ -266,7 +266,7 @@
             // 
             // row1_3
             // 
-            this.row1_3.BackColor = System.Drawing.Color.Silver;
+            this.row1_3.BackColor = System.Drawing.Color.SkyBlue;
             this.row1_3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row1_3.Location = new System.Drawing.Point(200, 700);
             this.row1_3.Margin = new System.Windows.Forms.Padding(0);
@@ -278,7 +278,7 @@
             // 
             // row1_4
             // 
-            this.row1_4.BackColor = System.Drawing.Color.White;
+            this.row1_4.BackColor = System.Drawing.Color.MistyRose;
             this.row1_4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row1_4.Location = new System.Drawing.Point(300, 700);
             this.row1_4.Margin = new System.Windows.Forms.Padding(0);
@@ -290,7 +290,7 @@
             // 
             // row1_5
             // 
-            this.row1_5.BackColor = System.Drawing.Color.Silver;
+            this.row1_5.BackColor = System.Drawing.Color.SkyBlue;
             this.row1_5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row1_5.Location = new System.Drawing.Point(400, 700);
             this.row1_5.Margin = new System.Windows.Forms.Padding(0);
@@ -302,7 +302,7 @@
             // 
             // row1_6
             // 
-            this.row1_6.BackColor = System.Drawing.Color.White;
+            this.row1_6.BackColor = System.Drawing.Color.MistyRose;
             this.row1_6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row1_6.Location = new System.Drawing.Point(500, 700);
             this.row1_6.Margin = new System.Windows.Forms.Padding(0);
@@ -314,7 +314,7 @@
             // 
             // row1_7
             // 
-            this.row1_7.BackColor = System.Drawing.Color.Silver;
+            this.row1_7.BackColor = System.Drawing.Color.SkyBlue;
             this.row1_7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row1_7.Location = new System.Drawing.Point(600, 700);
             this.row1_7.Margin = new System.Windows.Forms.Padding(0);
@@ -326,7 +326,7 @@
             // 
             // row1_8
             // 
-            this.row1_8.BackColor = System.Drawing.Color.White;
+            this.row1_8.BackColor = System.Drawing.Color.MistyRose;
             this.row1_8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row1_8.Location = new System.Drawing.Point(700, 700);
             this.row1_8.Margin = new System.Windows.Forms.Padding(0);
@@ -338,7 +338,7 @@
             // 
             // row2_1
             // 
-            this.row2_1.BackColor = System.Drawing.Color.White;
+            this.row2_1.BackColor = System.Drawing.Color.MistyRose;
             this.row2_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row2_1.Location = new System.Drawing.Point(0, 600);
             this.row2_1.Margin = new System.Windows.Forms.Padding(0);
@@ -350,7 +350,7 @@
             // 
             // row2_2
             // 
-            this.row2_2.BackColor = System.Drawing.Color.Silver;
+            this.row2_2.BackColor = System.Drawing.Color.SkyBlue;
             this.row2_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row2_2.Location = new System.Drawing.Point(100, 600);
             this.row2_2.Margin = new System.Windows.Forms.Padding(0);
@@ -362,7 +362,7 @@
             // 
             // row2_3
             // 
-            this.row2_3.BackColor = System.Drawing.Color.White;
+            this.row2_3.BackColor = System.Drawing.Color.MistyRose;
             this.row2_3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row2_3.Location = new System.Drawing.Point(200, 600);
             this.row2_3.Margin = new System.Windows.Forms.Padding(0);
@@ -374,7 +374,7 @@
             // 
             // row2_4
             // 
-            this.row2_4.BackColor = System.Drawing.Color.Silver;
+            this.row2_4.BackColor = System.Drawing.Color.SkyBlue;
             this.row2_4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row2_4.Location = new System.Drawing.Point(300, 600);
             this.row2_4.Margin = new System.Windows.Forms.Padding(0);
@@ -386,7 +386,7 @@
             // 
             // row2_5
             // 
-            this.row2_5.BackColor = System.Drawing.Color.White;
+            this.row2_5.BackColor = System.Drawing.Color.MistyRose;
             this.row2_5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row2_5.Location = new System.Drawing.Point(400, 600);
             this.row2_5.Margin = new System.Windows.Forms.Padding(0);
@@ -398,7 +398,7 @@
             // 
             // row2_6
             // 
-            this.row2_6.BackColor = System.Drawing.Color.Silver;
+            this.row2_6.BackColor = System.Drawing.Color.SkyBlue;
             this.row2_6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row2_6.Location = new System.Drawing.Point(500, 600);
             this.row2_6.Margin = new System.Windows.Forms.Padding(0);
@@ -410,7 +410,7 @@
             // 
             // row2_7
             // 
-            this.row2_7.BackColor = System.Drawing.Color.White;
+            this.row2_7.BackColor = System.Drawing.Color.MistyRose;
             this.row2_7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row2_7.Location = new System.Drawing.Point(600, 600);
             this.row2_7.Margin = new System.Windows.Forms.Padding(0);
@@ -422,7 +422,7 @@
             // 
             // row2_8
             // 
-            this.row2_8.BackColor = System.Drawing.Color.Silver;
+            this.row2_8.BackColor = System.Drawing.Color.SkyBlue;
             this.row2_8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row2_8.Location = new System.Drawing.Point(700, 600);
             this.row2_8.Margin = new System.Windows.Forms.Padding(0);
@@ -434,7 +434,7 @@
             // 
             // row3_1
             // 
-            this.row3_1.BackColor = System.Drawing.Color.Silver;
+            this.row3_1.BackColor = System.Drawing.Color.SkyBlue;
             this.row3_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row3_1.Location = new System.Drawing.Point(0, 500);
             this.row3_1.Margin = new System.Windows.Forms.Padding(0);
@@ -446,7 +446,7 @@
             // 
             // row3_2
             // 
-            this.row3_2.BackColor = System.Drawing.Color.White;
+            this.row3_2.BackColor = System.Drawing.Color.MistyRose;
             this.row3_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row3_2.Location = new System.Drawing.Point(100, 500);
             this.row3_2.Margin = new System.Windows.Forms.Padding(0);
@@ -458,7 +458,7 @@
             // 
             // row3_3
             // 
-            this.row3_3.BackColor = System.Drawing.Color.Silver;
+            this.row3_3.BackColor = System.Drawing.Color.SkyBlue;
             this.row3_3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row3_3.Location = new System.Drawing.Point(200, 500);
             this.row3_3.Margin = new System.Windows.Forms.Padding(0);
@@ -470,7 +470,7 @@
             // 
             // row3_4
             // 
-            this.row3_4.BackColor = System.Drawing.Color.White;
+            this.row3_4.BackColor = System.Drawing.Color.MistyRose;
             this.row3_4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row3_4.Location = new System.Drawing.Point(300, 500);
             this.row3_4.Margin = new System.Windows.Forms.Padding(0);
@@ -482,7 +482,7 @@
             // 
             // row3_5
             // 
-            this.row3_5.BackColor = System.Drawing.Color.Silver;
+            this.row3_5.BackColor = System.Drawing.Color.SkyBlue;
             this.row3_5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row3_5.Location = new System.Drawing.Point(400, 500);
             this.row3_5.Margin = new System.Windows.Forms.Padding(0);
@@ -494,7 +494,7 @@
             // 
             // row3_6
             // 
-            this.row3_6.BackColor = System.Drawing.Color.White;
+            this.row3_6.BackColor = System.Drawing.Color.MistyRose;
             this.row3_6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row3_6.Location = new System.Drawing.Point(500, 500);
             this.row3_6.Margin = new System.Windows.Forms.Padding(0);
@@ -506,7 +506,7 @@
             // 
             // row3_7
             // 
-            this.row3_7.BackColor = System.Drawing.Color.Silver;
+            this.row3_7.BackColor = System.Drawing.Color.SkyBlue;
             this.row3_7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row3_7.Location = new System.Drawing.Point(600, 500);
             this.row3_7.Margin = new System.Windows.Forms.Padding(0);
@@ -518,7 +518,7 @@
             // 
             // row3_8
             // 
-            this.row3_8.BackColor = System.Drawing.Color.White;
+            this.row3_8.BackColor = System.Drawing.Color.MistyRose;
             this.row3_8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row3_8.Location = new System.Drawing.Point(700, 500);
             this.row3_8.Margin = new System.Windows.Forms.Padding(0);
@@ -530,7 +530,7 @@
             // 
             // row4_1
             // 
-            this.row4_1.BackColor = System.Drawing.Color.White;
+            this.row4_1.BackColor = System.Drawing.Color.MistyRose;
             this.row4_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row4_1.Location = new System.Drawing.Point(0, 400);
             this.row4_1.Margin = new System.Windows.Forms.Padding(0);
@@ -542,7 +542,7 @@
             // 
             // row4_2
             // 
-            this.row4_2.BackColor = System.Drawing.Color.Silver;
+            this.row4_2.BackColor = System.Drawing.Color.SkyBlue;
             this.row4_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row4_2.Location = new System.Drawing.Point(100, 400);
             this.row4_2.Margin = new System.Windows.Forms.Padding(0);
@@ -554,7 +554,7 @@
             // 
             // row4_3
             // 
-            this.row4_3.BackColor = System.Drawing.Color.White;
+            this.row4_3.BackColor = System.Drawing.Color.MistyRose;
             this.row4_3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row4_3.Location = new System.Drawing.Point(200, 400);
             this.row4_3.Margin = new System.Windows.Forms.Padding(0);
@@ -566,7 +566,7 @@
             // 
             // row4_4
             // 
-            this.row4_4.BackColor = System.Drawing.Color.Silver;
+            this.row4_4.BackColor = System.Drawing.Color.SkyBlue;
             this.row4_4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row4_4.Location = new System.Drawing.Point(300, 400);
             this.row4_4.Margin = new System.Windows.Forms.Padding(0);
@@ -578,7 +578,7 @@
             // 
             // row4_5
             // 
-            this.row4_5.BackColor = System.Drawing.Color.White;
+            this.row4_5.BackColor = System.Drawing.Color.MistyRose;
             this.row4_5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row4_5.Location = new System.Drawing.Point(400, 400);
             this.row4_5.Margin = new System.Windows.Forms.Padding(0);
@@ -590,7 +590,7 @@
             // 
             // row4_6
             // 
-            this.row4_6.BackColor = System.Drawing.Color.Silver;
+            this.row4_6.BackColor = System.Drawing.Color.SkyBlue;
             this.row4_6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row4_6.Location = new System.Drawing.Point(500, 400);
             this.row4_6.Margin = new System.Windows.Forms.Padding(0);
@@ -602,7 +602,7 @@
             // 
             // row4_7
             // 
-            this.row4_7.BackColor = System.Drawing.Color.White;
+            this.row4_7.BackColor = System.Drawing.Color.MistyRose;
             this.row4_7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row4_7.Location = new System.Drawing.Point(600, 400);
             this.row4_7.Margin = new System.Windows.Forms.Padding(0);
@@ -614,7 +614,7 @@
             // 
             // row4_8
             // 
-            this.row4_8.BackColor = System.Drawing.Color.Silver;
+            this.row4_8.BackColor = System.Drawing.Color.SkyBlue;
             this.row4_8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row4_8.Location = new System.Drawing.Point(700, 400);
             this.row4_8.Margin = new System.Windows.Forms.Padding(0);
@@ -626,7 +626,7 @@
             // 
             // row5_1
             // 
-            this.row5_1.BackColor = System.Drawing.Color.Silver;
+            this.row5_1.BackColor = System.Drawing.Color.SkyBlue;
             this.row5_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row5_1.Location = new System.Drawing.Point(0, 300);
             this.row5_1.Margin = new System.Windows.Forms.Padding(0);
@@ -638,7 +638,7 @@
             // 
             // row5_2
             // 
-            this.row5_2.BackColor = System.Drawing.Color.White;
+            this.row5_2.BackColor = System.Drawing.Color.MistyRose;
             this.row5_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row5_2.Location = new System.Drawing.Point(100, 300);
             this.row5_2.Margin = new System.Windows.Forms.Padding(0);
@@ -650,7 +650,7 @@
             // 
             // row5_3
             // 
-            this.row5_3.BackColor = System.Drawing.Color.Silver;
+            this.row5_3.BackColor = System.Drawing.Color.SkyBlue;
             this.row5_3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row5_3.Location = new System.Drawing.Point(200, 300);
             this.row5_3.Margin = new System.Windows.Forms.Padding(0);
@@ -662,7 +662,7 @@
             // 
             // row5_4
             // 
-            this.row5_4.BackColor = System.Drawing.Color.White;
+            this.row5_4.BackColor = System.Drawing.Color.MistyRose;
             this.row5_4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row5_4.Location = new System.Drawing.Point(300, 300);
             this.row5_4.Margin = new System.Windows.Forms.Padding(0);
@@ -674,7 +674,7 @@
             // 
             // row5_5
             // 
-            this.row5_5.BackColor = System.Drawing.Color.Silver;
+            this.row5_5.BackColor = System.Drawing.Color.SkyBlue;
             this.row5_5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row5_5.Location = new System.Drawing.Point(400, 300);
             this.row5_5.Margin = new System.Windows.Forms.Padding(0);
@@ -686,7 +686,7 @@
             // 
             // row5_6
             // 
-            this.row5_6.BackColor = System.Drawing.Color.White;
+            this.row5_6.BackColor = System.Drawing.Color.MistyRose;
             this.row5_6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row5_6.Location = new System.Drawing.Point(500, 300);
             this.row5_6.Margin = new System.Windows.Forms.Padding(0);
@@ -698,7 +698,7 @@
             // 
             // row5_7
             // 
-            this.row5_7.BackColor = System.Drawing.Color.Silver;
+            this.row5_7.BackColor = System.Drawing.Color.SkyBlue;
             this.row5_7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row5_7.Location = new System.Drawing.Point(600, 300);
             this.row5_7.Margin = new System.Windows.Forms.Padding(0);
@@ -710,7 +710,7 @@
             // 
             // row5_8
             // 
-            this.row5_8.BackColor = System.Drawing.Color.White;
+            this.row5_8.BackColor = System.Drawing.Color.MistyRose;
             this.row5_8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row5_8.Location = new System.Drawing.Point(700, 300);
             this.row5_8.Margin = new System.Windows.Forms.Padding(0);
@@ -722,7 +722,7 @@
             // 
             // row6_1
             // 
-            this.row6_1.BackColor = System.Drawing.Color.White;
+            this.row6_1.BackColor = System.Drawing.Color.MistyRose;
             this.row6_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row6_1.Location = new System.Drawing.Point(0, 200);
             this.row6_1.Margin = new System.Windows.Forms.Padding(0);
@@ -734,7 +734,7 @@
             // 
             // row6_2
             // 
-            this.row6_2.BackColor = System.Drawing.Color.Silver;
+            this.row6_2.BackColor = System.Drawing.Color.SkyBlue;
             this.row6_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row6_2.Location = new System.Drawing.Point(100, 200);
             this.row6_2.Margin = new System.Windows.Forms.Padding(0);
@@ -746,7 +746,7 @@
             // 
             // row6_3
             // 
-            this.row6_3.BackColor = System.Drawing.Color.White;
+            this.row6_3.BackColor = System.Drawing.Color.MistyRose;
             this.row6_3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row6_3.Location = new System.Drawing.Point(200, 200);
             this.row6_3.Margin = new System.Windows.Forms.Padding(0);
@@ -758,7 +758,7 @@
             // 
             // row6_4
             // 
-            this.row6_4.BackColor = System.Drawing.Color.Silver;
+            this.row6_4.BackColor = System.Drawing.Color.SkyBlue;
             this.row6_4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row6_4.Location = new System.Drawing.Point(300, 200);
             this.row6_4.Margin = new System.Windows.Forms.Padding(0);
@@ -770,7 +770,7 @@
             // 
             // row6_5
             // 
-            this.row6_5.BackColor = System.Drawing.Color.White;
+            this.row6_5.BackColor = System.Drawing.Color.MistyRose;
             this.row6_5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row6_5.Location = new System.Drawing.Point(400, 200);
             this.row6_5.Margin = new System.Windows.Forms.Padding(0);
@@ -782,7 +782,7 @@
             // 
             // row6_6
             // 
-            this.row6_6.BackColor = System.Drawing.Color.Silver;
+            this.row6_6.BackColor = System.Drawing.Color.SkyBlue;
             this.row6_6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row6_6.Location = new System.Drawing.Point(500, 200);
             this.row6_6.Margin = new System.Windows.Forms.Padding(0);
@@ -794,7 +794,7 @@
             // 
             // row6_7
             // 
-            this.row6_7.BackColor = System.Drawing.Color.White;
+            this.row6_7.BackColor = System.Drawing.Color.MistyRose;
             this.row6_7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row6_7.Location = new System.Drawing.Point(600, 200);
             this.row6_7.Margin = new System.Windows.Forms.Padding(0);
@@ -806,7 +806,7 @@
             // 
             // row6_8
             // 
-            this.row6_8.BackColor = System.Drawing.Color.Silver;
+            this.row6_8.BackColor = System.Drawing.Color.SkyBlue;
             this.row6_8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row6_8.Location = new System.Drawing.Point(700, 200);
             this.row6_8.Margin = new System.Windows.Forms.Padding(0);
@@ -818,7 +818,7 @@
             // 
             // row7_1
             // 
-            this.row7_1.BackColor = System.Drawing.Color.Silver;
+            this.row7_1.BackColor = System.Drawing.Color.SkyBlue;
             this.row7_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row7_1.Location = new System.Drawing.Point(0, 100);
             this.row7_1.Margin = new System.Windows.Forms.Padding(0);
@@ -830,7 +830,7 @@
             // 
             // row7_2
             // 
-            this.row7_2.BackColor = System.Drawing.Color.White;
+            this.row7_2.BackColor = System.Drawing.Color.MistyRose;
             this.row7_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row7_2.Location = new System.Drawing.Point(100, 100);
             this.row7_2.Margin = new System.Windows.Forms.Padding(0);
@@ -842,7 +842,7 @@
             // 
             // row7_3
             // 
-            this.row7_3.BackColor = System.Drawing.Color.Silver;
+            this.row7_3.BackColor = System.Drawing.Color.SkyBlue;
             this.row7_3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row7_3.Location = new System.Drawing.Point(200, 100);
             this.row7_3.Margin = new System.Windows.Forms.Padding(0);
@@ -854,7 +854,7 @@
             // 
             // row7_4
             // 
-            this.row7_4.BackColor = System.Drawing.Color.White;
+            this.row7_4.BackColor = System.Drawing.Color.MistyRose;
             this.row7_4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row7_4.Location = new System.Drawing.Point(300, 100);
             this.row7_4.Margin = new System.Windows.Forms.Padding(0);
@@ -866,7 +866,7 @@
             // 
             // row7_5
             // 
-            this.row7_5.BackColor = System.Drawing.Color.Silver;
+            this.row7_5.BackColor = System.Drawing.Color.SkyBlue;
             this.row7_5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row7_5.Location = new System.Drawing.Point(400, 100);
             this.row7_5.Margin = new System.Windows.Forms.Padding(0);
@@ -878,7 +878,7 @@
             // 
             // row7_6
             // 
-            this.row7_6.BackColor = System.Drawing.Color.White;
+            this.row7_6.BackColor = System.Drawing.Color.MistyRose;
             this.row7_6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row7_6.Location = new System.Drawing.Point(500, 100);
             this.row7_6.Margin = new System.Windows.Forms.Padding(0);
@@ -890,7 +890,7 @@
             // 
             // row7_7
             // 
-            this.row7_7.BackColor = System.Drawing.Color.Silver;
+            this.row7_7.BackColor = System.Drawing.Color.SkyBlue;
             this.row7_7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row7_7.Location = new System.Drawing.Point(600, 100);
             this.row7_7.Margin = new System.Windows.Forms.Padding(0);
@@ -902,7 +902,7 @@
             // 
             // row7_8
             // 
-            this.row7_8.BackColor = System.Drawing.Color.White;
+            this.row7_8.BackColor = System.Drawing.Color.MistyRose;
             this.row7_8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row7_8.Location = new System.Drawing.Point(700, 100);
             this.row7_8.Margin = new System.Windows.Forms.Padding(0);
@@ -914,7 +914,7 @@
             // 
             // row8_1
             // 
-            this.row8_1.BackColor = System.Drawing.Color.White;
+            this.row8_1.BackColor = System.Drawing.Color.MistyRose;
             this.row8_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row8_1.Location = new System.Drawing.Point(0, 0);
             this.row8_1.Margin = new System.Windows.Forms.Padding(0);
@@ -926,7 +926,7 @@
             // 
             // row8_2
             // 
-            this.row8_2.BackColor = System.Drawing.Color.Silver;
+            this.row8_2.BackColor = System.Drawing.Color.SkyBlue;
             this.row8_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row8_2.Location = new System.Drawing.Point(100, 0);
             this.row8_2.Margin = new System.Windows.Forms.Padding(0);
@@ -938,7 +938,7 @@
             // 
             // row8_3
             // 
-            this.row8_3.BackColor = System.Drawing.Color.White;
+            this.row8_3.BackColor = System.Drawing.Color.MistyRose;
             this.row8_3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row8_3.Location = new System.Drawing.Point(200, 0);
             this.row8_3.Margin = new System.Windows.Forms.Padding(0);
@@ -950,7 +950,7 @@
             // 
             // row8_4
             // 
-            this.row8_4.BackColor = System.Drawing.Color.Silver;
+            this.row8_4.BackColor = System.Drawing.Color.SkyBlue;
             this.row8_4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row8_4.Location = new System.Drawing.Point(300, 0);
             this.row8_4.Margin = new System.Windows.Forms.Padding(0);
@@ -962,7 +962,7 @@
             // 
             // row8_5
             // 
-            this.row8_5.BackColor = System.Drawing.Color.White;
+            this.row8_5.BackColor = System.Drawing.Color.MistyRose;
             this.row8_5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row8_5.Location = new System.Drawing.Point(400, 0);
             this.row8_5.Margin = new System.Windows.Forms.Padding(0);
@@ -974,7 +974,7 @@
             // 
             // row8_6
             // 
-            this.row8_6.BackColor = System.Drawing.Color.Silver;
+            this.row8_6.BackColor = System.Drawing.Color.SkyBlue;
             this.row8_6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row8_6.Location = new System.Drawing.Point(500, 0);
             this.row8_6.Margin = new System.Windows.Forms.Padding(0);
@@ -986,7 +986,7 @@
             // 
             // row8_7
             // 
-            this.row8_7.BackColor = System.Drawing.Color.White;
+            this.row8_7.BackColor = System.Drawing.Color.MistyRose;
             this.row8_7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row8_7.Location = new System.Drawing.Point(600, 0);
             this.row8_7.Margin = new System.Windows.Forms.Padding(0);
@@ -998,7 +998,7 @@
             // 
             // row8_8
             // 
-            this.row8_8.BackColor = System.Drawing.Color.Silver;
+            this.row8_8.BackColor = System.Drawing.Color.SkyBlue;
             this.row8_8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row8_8.Location = new System.Drawing.Point(700, 0);
             this.row8_8.Margin = new System.Windows.Forms.Padding(0);

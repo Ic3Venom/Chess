@@ -7,8 +7,9 @@ namespace ChessAttempt2
     public partial class Form1 : Form
     {
         List<Piece> pieces = new List<Piece>();
+        List<Piece> moves = new List<Piece>();
         bool side, gameStart;
-        Label startLabel;
+        Piece start;
         int p1time, p2time;
 
 
@@ -17,7 +18,7 @@ namespace ChessAttempt2
             InitializeComponent();
             Piece.InitCustomLabelFont();
             InitializeBoard();
-            
+
             message.Text = "Click here to begin the game";
         }
 
@@ -77,7 +78,28 @@ namespace ChessAttempt2
             }
         }
 
-        private Piece findPiece(Label label)
+        private Piece FetchPiece(int x, int y)
+        {
+            int counter = 0;
+            x--;
+            y--;
+
+            foreach( Label l in tableLayoutPanel1.Controls )
+            {
+
+                if (counter == (y * 8) + x)
+                {
+                    return FindPiece(l);
+                }
+
+                //c...++
+                counter++;
+            }
+
+            return null;
+        }
+
+        private Piece FindPiece(Label label)
         {
             foreach (Piece piece in pieces)
             {
@@ -86,36 +108,8 @@ namespace ChessAttempt2
                     return piece;
                 }
             }
-            return new Piece("None", 2, label);
-        }
 
-        private void Color(Label piece)
-        {
-            if (piece != null)
-            {
-                if ((int)(piece.Name[3] - '0') % 2 == 0)
-                {
-                    if ((int)(piece.Name[5] - '0') % 2 == 0)
-                    {
-                        piece.BackColor = System.Drawing.Color.Silver;
-                    }
-                    else
-                    {
-                        piece.BackColor = System.Drawing.Color.White;
-                    }
-                }
-                else
-                {
-                    if ((int)(piece.Name[5] - '0') % 2 == 0)
-                    {
-                        piece.BackColor = System.Drawing.Color.White;
-                    }
-                    else
-                    {
-                        piece.BackColor = System.Drawing.Color.Silver;
-                    }
-                }
-            }
+            return new Piece("None", 2, label);
         }
 
         private void game_Start(object sender, EventArgs e)
@@ -129,46 +123,45 @@ namespace ChessAttempt2
             player1Time.Enabled = true;
             player1.Enabled = true;
             side = true;
-        }
+        } 
 
         private void label_Click(object sender, EventArgs e)
         {
             if (gameStart)
             {
-                Color(startLabel);
-
-                Label endLabel = sender as Label;
-
-                endLabel.BackColor = System.Drawing.Color.PaleGreen; //System.Drawing.Color.LightGreen;
+                Piece end = FindPiece(sender as Label);
+                
+                end.Color(System.Drawing.Color.PaleGreen);
                 
 
-                if (startLabel == null)
+                if (start == null)
                 {
-                    startLabel = endLabel;
+                    start = end;
                     return;
                 }
-                
-                Piece start = findPiece(startLabel);
-                Piece end = findPiece(endLabel);
+                else
+                {
+                    start.DefaultColor();
+                }
 
                 if (start == end)
                 {
-                    Color(endLabel);
-                    startLabel = null;
-                    endLabel = null;
+                    end.DefaultColor();
+                    start = null;
                 }
                 else if (Piece.ValidateMove(start, end, side))
                 {
-                    start.Move(end);
+                    start.Replace(end);
                     pieces.Remove(end);
-                    Color(endLabel);
+                    pieces.Add(start);
+                    end.DefaultColor();
 
-                    startLabel = null;
+                    start = null;
                     Clocks();
                 }
                 else
                 {
-                    startLabel = endLabel;
+                    start = end;
                 }
             }
         }

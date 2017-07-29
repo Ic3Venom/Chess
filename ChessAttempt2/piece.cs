@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -14,10 +13,11 @@ namespace ChessAttempt2
 
         //font used for chess pieces
         private static PrivateFontCollection pfc = new PrivateFontCollection();
-        private static char[] whitePieces = { 'p', 'n', 'b', 'r', 'q', 'k'};
-        private static char[] blackPieces = { 'o', 'm', 'v', 't', 'w', 'l'};
-        public static List<string> pieceNames = new List<string>() { "Pawn", "Knight", "Bishop", "Rook", "Queen", "King", "None"};
-
+        private static char[] whitePieces = { 'p', 'n', 'b', 'r', 'q', 'k' };
+        private static char[] blackPieces = { 'o', 'm', 'v', 't', 'w', 'l' };
+        public static List<string> pieceNames = new List<string>()
+            { "Pawn", "Knight", "Bishop", "Rook", "Queen", "King", "None" };
+        
         public Piece(string name, int color, Label label)
         {
             this.name = name;
@@ -53,13 +53,43 @@ namespace ChessAttempt2
             pfc.AddMemoryFont(data, fontLength);
         }
 
-        public void Move(Piece newPiece)
+        public void Replace(Piece newPiece)
         {
             newPiece.label.Font = new System.Drawing.Font(pfc.Families[0], 72);
             newPiece.label.Text = label.Text;
 
             label.Text = " ";
             label = newPiece.label;
+        }
+
+        public void DefaultColor()
+        {
+            if ((int)(label.Name[3] - '0') % 2 == 0)
+            {
+                if ((int)(label.Name[5] - '0') % 2 == 0)
+                {
+                    label.BackColor = System.Drawing.Color.SkyBlue;
+                }
+                else
+                {
+                    label.BackColor = System.Drawing.Color.MistyRose;
+                }
+            }
+            else
+            {
+                if ((int)(label.Name[5] - '0') % 2 == 0)
+                {
+                    label.BackColor = System.Drawing.Color.MistyRose;
+                }
+                else
+                {
+                    label.BackColor = System.Drawing.Color.SkyBlue;
+                }
+            }
+        }
+        public void Color(System.Drawing.Color color)
+        {
+            label.BackColor = color;
         }
 
         public static bool ValidateMove(Piece start, Piece end, bool side)
@@ -70,7 +100,6 @@ namespace ChessAttempt2
 
             return valid;
         }
-
         private static bool pieceLogic(Piece start, Piece end, bool side)
         {
             /* Necessary logic points that need to be covered:
@@ -88,37 +117,37 @@ namespace ChessAttempt2
                 || (side == false && end.GetColor() == 1)
                 || (start.GetColor() == 2));
         }
-
         private static bool Pawn(Label end)
         {
+            //<0,1>, <0,2>, <1,1>
             return true;
         }
-
         private static bool Knight(Label end)
         {
+            //<+-1,+-2>, <+-2,+-1>
             return true;
         }
-
         private static bool Bishop(Label end)
         {
+            //<+-n,+-n>
             return true;
         }
-
         private static bool Rook(Label end)
         {
+            //<+-n,0>, <0,+-n>
             return true;
         }
-
         private static bool Queen(Label end)
         {
+            //<+-n,+-n>, <+-n,0>, <0,+-n>
             return true;
         }
-
         private static bool King(Label end)
         {
+            //<+-1,+-1>, <0,+-1>, <+-1,0>
             return true;
         }
-
+        
         public string GetName( )
         {
             return name;
