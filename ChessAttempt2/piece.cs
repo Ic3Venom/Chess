@@ -11,18 +11,21 @@ namespace ChessAttempt2
         private int color;
         private Label label;
 
+        public static List<Piece> stored = new List<Piece>();
+        public static List<Piece> moves = new List<Piece>();
+        public static List<string> pieceNames = new List<string>()
+            { "Pawn", "Knight", "Bishop", "Rook", "Queen", "King", "None" };
+
         //font used for chess pieces
         private static PrivateFontCollection pfc = new PrivateFontCollection();
         private static char[] whitePieces = { 'p', 'n', 'b', 'r', 'q', 'k' };
         private static char[] blackPieces = { 'o', 'm', 'v', 't', 'w', 'l' };
-        public static List<string> pieceNames = new List<string>()
-            { "Pawn", "Knight", "Bishop", "Rook", "Queen", "King", "None" };
         
         public Piece(string name, int color, Label label)
         {
             this.name = name;
             this.color = color;
-            this.label = label;
+            this.label = label; 
 
             if (color == 0)
             {
@@ -61,6 +64,10 @@ namespace ChessAttempt2
             label.Text = " ";
             label = newPiece.label;
         }
+        public void Move(Piece newPiece)
+        {
+
+        }
 
         public void DefaultColor()
         {
@@ -92,6 +99,80 @@ namespace ChessAttempt2
             label.BackColor = color;
         }
 
+        public static Piece PieceAt(int x, int y)
+        {
+            return null;
+        }
+        public static Piece Find(Label label)
+        {
+            foreach (Piece piece in stored)
+            {
+                if (label == piece.GetLabel())
+                {
+                    return piece;
+                }
+            }
+
+            return new Piece("None", 2, label);
+        }
+
+        public void ShowPossibleMoves()
+        {
+            moves.Clear();
+
+            switch (name)
+            {
+                case "Pawn":
+                    Pawn();
+                    break;
+                case "Knight":
+                    Knight();
+                    break;
+                case "Bishop":
+                    Bishop();
+                    break;
+                case "Rook":
+                    Rook();
+                    break;
+                case "Queen":
+                    Queen();
+                    break;
+                case "King":
+                    King();
+                    break;
+                case "None":
+                    break;
+            } 
+            foreach(Piece p in moves)
+            {
+                p.Color(System.Drawing.Color.LightGreen);
+            }          
+        }
+        private void Pawn( )
+        {
+            //<0,1>, <0,2>, <1,1>
+        }
+        private void Knight( )
+        {
+            //<+-1,+-2>, <+-2,+-1>
+        }
+        private void Bishop( )
+        {
+            //<+-n,+-n>
+        }
+        private void Rook( )
+        {
+            //<+-n,0>, <0,+-n>
+        }
+        private void Queen( )
+        {
+            //<+-n,+-n>, <+-n,0>, <0,+-n>
+        }
+        private void King( )
+        {
+            //<+-1,+-1>, <0,+-1>, <+-1,0> unique
+        }
+
         public static bool ValidateMove(Piece start, Piece end, bool side)
         {
             bool valid = false;
@@ -116,36 +197,6 @@ namespace ChessAttempt2
                 || (side == false && start.GetColor() == 0)
                 || (side == false && end.GetColor() == 1)
                 || (start.GetColor() == 2));
-        }
-        private static bool Pawn(Label end)
-        {
-            //<0,1>, <0,2>, <1,1>
-            return true;
-        }
-        private static bool Knight(Label end)
-        {
-            //<+-1,+-2>, <+-2,+-1>
-            return true;
-        }
-        private static bool Bishop(Label end)
-        {
-            //<+-n,+-n>
-            return true;
-        }
-        private static bool Rook(Label end)
-        {
-            //<+-n,0>, <0,+-n>
-            return true;
-        }
-        private static bool Queen(Label end)
-        {
-            //<+-n,+-n>, <+-n,0>, <0,+-n>
-            return true;
-        }
-        private static bool King(Label end)
-        {
-            //<+-1,+-1>, <0,+-1>, <+-1,0>
-            return true;
         }
         
         public string GetName( )

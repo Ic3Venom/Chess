@@ -6,7 +6,6 @@ namespace ChessAttempt2
 {
     public partial class Form1 : Form
     {
-        List<Piece> pieces = new List<Piece>();
         List<Piece> moves = new List<Piece>();
         bool side, gameStart;
         Piece start;
@@ -25,38 +24,38 @@ namespace ChessAttempt2
         private void InitializeBoard()
         {
             //Wall of text, but it's better than looping through null labels
-            pieces.Add(new Piece(Piece.pieceNames[3], 1, row8_1));
-            pieces.Add(new Piece(Piece.pieceNames[1], 1, row8_2));
-            pieces.Add(new Piece(Piece.pieceNames[2], 1, row8_3));
-            pieces.Add(new Piece(Piece.pieceNames[4], 1, row8_4));
-            pieces.Add(new Piece(Piece.pieceNames[5], 1, row8_5));
-            pieces.Add(new Piece(Piece.pieceNames[2], 1, row8_6));
-            pieces.Add(new Piece(Piece.pieceNames[1], 1, row8_7));
-            pieces.Add(new Piece(Piece.pieceNames[3], 1, row8_8));
-            pieces.Add(new Piece(Piece.pieceNames[3], 0, row1_1));
-            pieces.Add(new Piece(Piece.pieceNames[1], 0, row1_2));
-            pieces.Add(new Piece(Piece.pieceNames[2], 0, row1_3));
-            pieces.Add(new Piece(Piece.pieceNames[4], 0, row1_4));
-            pieces.Add(new Piece(Piece.pieceNames[5], 0, row1_5));
-            pieces.Add(new Piece(Piece.pieceNames[2], 0, row1_6));
-            pieces.Add(new Piece(Piece.pieceNames[1], 0, row1_7));
-            pieces.Add(new Piece(Piece.pieceNames[3], 0, row1_8));
-            pieces.Add(new Piece(Piece.pieceNames[0], 1, row7_8));
-            pieces.Add(new Piece(Piece.pieceNames[0], 1, row7_1));
-            pieces.Add(new Piece(Piece.pieceNames[0], 1, row7_2));
-            pieces.Add(new Piece(Piece.pieceNames[0], 1, row7_3));
-            pieces.Add(new Piece(Piece.pieceNames[0], 1, row7_4));
-            pieces.Add(new Piece(Piece.pieceNames[0], 1, row7_5));
-            pieces.Add(new Piece(Piece.pieceNames[0], 1, row7_6));
-            pieces.Add(new Piece(Piece.pieceNames[0], 1, row7_7));
-            pieces.Add(new Piece(Piece.pieceNames[0], 0, row2_1));
-            pieces.Add(new Piece(Piece.pieceNames[0], 0, row2_2));
-            pieces.Add(new Piece(Piece.pieceNames[0], 0, row2_3));
-            pieces.Add(new Piece(Piece.pieceNames[0], 0, row2_4));
-            pieces.Add(new Piece(Piece.pieceNames[0], 0, row2_5));
-            pieces.Add(new Piece(Piece.pieceNames[0], 0, row2_6));
-            pieces.Add(new Piece(Piece.pieceNames[0], 0, row2_7));
-            pieces.Add(new Piece(Piece.pieceNames[0], 0, row2_8));
+            Piece.stored.Add(new Piece(Piece.pieceNames[3], 1, row8_1));
+            Piece.stored.Add(new Piece(Piece.pieceNames[1], 1, row8_2));
+            Piece.stored.Add(new Piece(Piece.pieceNames[2], 1, row8_3));
+            Piece.stored.Add(new Piece(Piece.pieceNames[4], 1, row8_4));
+            Piece.stored.Add(new Piece(Piece.pieceNames[5], 1, row8_5));
+            Piece.stored.Add(new Piece(Piece.pieceNames[2], 1, row8_6));
+            Piece.stored.Add(new Piece(Piece.pieceNames[1], 1, row8_7));
+            Piece.stored.Add(new Piece(Piece.pieceNames[3], 1, row8_8));
+            Piece.stored.Add(new Piece(Piece.pieceNames[3], 0, row1_1));
+            Piece.stored.Add(new Piece(Piece.pieceNames[1], 0, row1_2));
+            Piece.stored.Add(new Piece(Piece.pieceNames[2], 0, row1_3));
+            Piece.stored.Add(new Piece(Piece.pieceNames[4], 0, row1_4));
+            Piece.stored.Add(new Piece(Piece.pieceNames[5], 0, row1_5));
+            Piece.stored.Add(new Piece(Piece.pieceNames[2], 0, row1_6));
+            Piece.stored.Add(new Piece(Piece.pieceNames[1], 0, row1_7));
+            Piece.stored.Add(new Piece(Piece.pieceNames[3], 0, row1_8));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 1, row7_8));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 1, row7_1));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 1, row7_2));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 1, row7_3));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 1, row7_4));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 1, row7_5));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 1, row7_6));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 1, row7_7));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 0, row2_1));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 0, row2_2));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 0, row2_3));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 0, row2_4));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 0, row2_5));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 0, row2_6));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 0, row2_7));
+            Piece.stored.Add(new Piece(Piece.pieceNames[0], 0, row2_8));
         }
 
         private void Clocks()
@@ -89,29 +88,16 @@ namespace ChessAttempt2
 
                 if (counter == (y * 8) + x)
                 {
-                    return FindPiece(l);
+                    return Piece.Find(l);
                 }
-
+                
                 //c...++
                 counter++;
             }
 
             return null;
         }
-
-        private Piece FindPiece(Label label)
-        {
-            foreach (Piece piece in pieces)
-            {
-                if (label == piece.GetLabel())
-                {
-                    return piece;
-                }
-            }
-
-            return new Piece("None", 2, label);
-        }
-
+        
         private void game_Start(object sender, EventArgs e)
         {
             message.Click -= game_Start;
@@ -129,13 +115,14 @@ namespace ChessAttempt2
         {
             if (gameStart)
             {
-                Piece end = FindPiece(sender as Label);
-                
+                Piece end = Piece.Find(sender as Label);
+                 
                 end.Color(System.Drawing.Color.PaleGreen);
                 
 
                 if (start == null)
                 {
+                    end.ShowPossibleMoves();
                     start = end;
                     return;
                 }
@@ -152,8 +139,8 @@ namespace ChessAttempt2
                 else if (Piece.ValidateMove(start, end, side))
                 {
                     start.Replace(end);
-                    pieces.Remove(end);
-                    pieces.Add(start);
+                    Piece.stored.Remove(end);
+                    Piece.stored.Add(start);
                     end.DefaultColor();
 
                     start = null;
