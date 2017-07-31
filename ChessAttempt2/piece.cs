@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -116,7 +117,7 @@ namespace ChessAttempt2
             return new Piece("None", 2, label);
         }
 
-        public void ShowPossibleMoves()
+        public  void ShowPossibleMoves()
         {
             moves.Clear();
 
@@ -148,10 +149,11 @@ namespace ChessAttempt2
                 p.Color(System.Drawing.Color.LightGreen);
             }          
         }
-        private void Pawn( )
+        private void Pawn()
         {
-            //<0,1>, <0,2>, <1,1>
+
         }
+        
         private void Knight( )
         {
             //<+-1,+-2>, <+-2,+-1>

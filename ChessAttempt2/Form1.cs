@@ -97,7 +97,7 @@ namespace ChessAttempt2
 
             return null;
         }
-        
+         
         private void game_Start(object sender, EventArgs e)
         {
             message.Click -= game_Start;
